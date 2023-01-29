@@ -14,7 +14,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FormattedMessage } from "react-intl";
 import { Select } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faUsers, faLanguage } from "@fortawesome/free-solid-svg-icons";
 
 import ContactMe from "./ContactMe";
 import { LOCALES } from "../i18n/locales";
@@ -90,7 +90,7 @@ function Footer(props: any) {
               sx={{
                 mr: 2,
                 display: { xs: "none", md: "flex" },
-                color: "inherit",
+                color: "#000",
                 textDecoration: "none",
               }}
             >
@@ -103,7 +103,7 @@ function Footer(props: any) {
                 viewBox="0 0 16 16"
                 width="1rem"
                 height="1rem"
-                fill="currentColor"
+                fill="#000"
               >
                 <path
                   className="path"
@@ -114,7 +114,12 @@ function Footer(props: any) {
                   d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"
                 ></path>
               </svg>
-              <Box sx={{ ml: 1, display: { xs: "none", md: "flex" } }}>
+              <Box
+                sx={{
+                  ml: 1,
+                  display: { xs: "none", md: "flex", textTransform: "none" },
+                }}
+              >
                 <FormattedMessage id="privacy" />
               </Box>
             </Button>
@@ -124,7 +129,7 @@ function Footer(props: any) {
                 viewBox="0 0 16 16"
                 width="1rem"
                 height="1rem"
-                fill="currentColor"
+                fill="#000"
               >
                 <path
                   className="path"
@@ -135,7 +140,12 @@ function Footer(props: any) {
                   d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
                 ></path>
               </svg>
-              <Box sx={{ ml: 1, display: { xs: "none", md: "flex" } }}>
+              <Box
+                sx={{
+                  ml: 1,
+                  display: { xs: "none", md: "flex", textTransform: "none" },
+                }}
+              >
                 <FormattedMessage id="imprint" />
               </Box>
             </Button>
@@ -146,28 +156,36 @@ function Footer(props: any) {
               variant="standard"
               onChange={props.handleChange}
               value={props.currentLocale}
+              sx={{
+                backgroundColor: "#E98074",
+                borderRadius: "0.3rem",
+                padding: "0 0.5rem",
+                height: { xs: "1.8rem", md: "2.3rem" },
+              }}
             >
-              {languages.map((language: any) => (
+              {languages.map((language) => (
                 <MenuItem
                   key={language.id}
                   onClick={handleCloseUserMenu}
-                  component="option"
+                  defaultValue={props.currentLocale}
                   value={language.code}
+                  sx={{ backgroundColor: "#eae7dc" }}
                 >
                   <Button disabled component="span">
-                    <Button
-                      disabled
-                      component="span"
+                    <FontAwesomeIcon
+                      icon={faLanguage}
+                      color="#000"
+                      style={{ fontSize: "1.2rem", marginRight: "0.5rem" }}
+                    />
+                    <Typography
                       sx={{
-                        display: {
-                          xs: "none",
-                          md: "flex",
-                        },
+                        marginRight: "-1.2rem",
+                        fontSize: "0.8rem",
+                        color: "#000",
                       }}
                     >
-                      Language -
-                    </Button>
-                    {language.name}
+                      {language.name}
+                    </Typography>
                   </Button>
                 </MenuItem>
               ))}
@@ -176,7 +194,11 @@ function Footer(props: any) {
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Social Media Profiles">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <FontAwesomeIcon icon={faUsers} color="white" />
+                  <FontAwesomeIcon
+                    icon={faUsers}
+                    color="#000"
+                    style={{ width: "2rem", height: "1.4rem" }}
+                  />
                 </IconButton>
               </Tooltip>
               <Menu

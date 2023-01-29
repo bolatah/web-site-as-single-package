@@ -40,9 +40,9 @@ const ContactMe = () => {
   const {
     control,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors, isDirty, isValid },
   } = useForm<contactData>({ mode: "onChange" });
-
   const [openFormDialog, setOpenFormDialog] = useState(false);
   const [openSuccessAlert, setOpenSuccessAlert] = useState(false);
   const [openFailureAlert, setOpenFailureAlert] = useState(false);
@@ -96,8 +96,13 @@ const ContactMe = () => {
   return (
     <>
       <Button variant="contained" onClick={() => setOpenFormDialog(true)}>
-        <FontAwesomeIcon icon={faEnvelopeOpen} color="white" />
-        <Box sx={{ ml: 1, display: { xs: "none", md: "flex" } }}>
+        <FontAwesomeIcon icon={faEnvelopeOpen} color="#000" />
+        <Box
+          sx={{
+            ml: 1,
+            display: { xs: "none", md: "flex", textTransform: "none" },
+          }}
+        >
           <FormattedMessage id="contact_me" />
         </Box>
       </Button>
@@ -215,12 +220,11 @@ const ContactMe = () => {
               <Button
                 type="submit"
                 onClick={
-                  control._formState.isSubmitted &&
-                  Object.keys(errors).length === 0
+                  isDirty && isValid
                     ? () => {
-                        console.log(control._formValues, control._formState);
                         setOpenSuccessAlert(true);
                         setOpenFormDialog(false);
+                        reset();
                       }
                     : () => {
                         setOpenFailureAlert(true);

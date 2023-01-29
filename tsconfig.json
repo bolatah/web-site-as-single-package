@@ -20,11 +20,9 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  /* "include": [
-    "src"
-  ], */
   "include": [
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src/components/particlesConfig"
   ]
 }

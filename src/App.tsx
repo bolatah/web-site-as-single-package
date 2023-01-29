@@ -11,6 +11,7 @@ import { LOCALES } from "./i18n/locales";
 import { messages } from "./i18n/messages/allMessages";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
+import ParticlesContainer from "./components/Particles";
 
 const hostLocal = navigator.language;
 
@@ -30,6 +31,7 @@ function App() {
       locale={currentLocale}
       defaultLocale={LOCALES.ENGLISH}
     >
+      <ParticlesContainer />
       <ResponsiveAppBar />
       <BrowserRouter>
         <Routes>

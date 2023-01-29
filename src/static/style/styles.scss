@@ -26,30 +26,15 @@ body {
   flex-direction: column;
    flex: 1 0 auto;
   width: 100%;
-
-}
-
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
-}
-
-.hero-body {
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 0;
   padding: 1.5rem;
   @media screen and (min-width: 980px) {
-    padding: 1.5rem 5rem;
+    padding: 1.5 5rem;
   }
 }
 
+
 .container {
   max-width: 1200px;
-  width: 100%;
   display:flex;
   margin: 0 auto;
 }
@@ -82,9 +67,7 @@ body {
   @media screen and (max-width: 979px) {
     width: 100%;
   }
-  @media screen and (min-width: 980px) {
-   
-  }
+  
 
 }
 
@@ -94,13 +77,13 @@ body {
 }
 
 .card-body {
-  // margin-top: 27px;
-  // margin-bottom: 27px;
+ 
   line-height: 1.5;
   font-size: 16px;
   @media screen and (min-width: 576px) {
     font-size: 16px;
   }
+  
 }
 
 .image-container {

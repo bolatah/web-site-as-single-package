@@ -1,8 +1,5 @@
-// @ts-nocheck
 import { useState, useRef } from "react";
 import { useSpring, animated } from "react-spring";
-import ReactParticles from "react-tsparticles";
-import particlesConfig from "../components/Particles";
 import { FormattedMessage } from "react-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,40 +8,19 @@ import {
   faGraduationCap,
   faArrowRightLong,
 } from "@fortawesome/free-solid-svg-icons";
-import "../static/style/styles.scss";
 
-const Launch = () => {
-  return (
-    <div className="main">
-      <Particles>
-        <Hero>
-          <div className="container">
-            <div className="row">
-              {cards.map((card, i) => (
-                <div className="column">
-                  <Card>
-                    <div className="card-title">
-                      {card.title}
-                      {card.icon}
-                    </div>
-                    <div className="card-body">{card.description}</div>
-                    <Image
-                      ratio={card.imageRatio}
-                      src={card.image}
-                      alt={card.alt}
-                    />
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Hero>
-      </Particles>
-    </div>
-  );
+type ImageProps = {
+  ratio: number;
+  src: string;
+  alt: string;
 };
-const Card = ({ children }) => {
-  const ref = useRef();
+
+type CardProps = {
+  children: React.ReactNode;
+};
+
+const Card = ({ children }: CardProps) => {
+  const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setHovered] = useState(false);
 
   const [animatedProps, setAnimatedProps] = useSpring(() => {
@@ -53,6 +29,7 @@ const Card = ({ children }) => {
       config: { mass: 10, tension: 400, friction: 40, precision: 0.00001 },
     };
   });
+
   return (
     <animated.div
       ref={ref}
@@ -61,18 +38,18 @@ const Card = ({ children }) => {
       onMouseMove={({ clientX, clientY }) => {
         const x =
           clientX -
-          (ref.current.offsetLeft -
+          (ref.current!.offsetLeft -
             (window.scrollX || window.pageXOffset || document.body.scrollLeft));
 
         const y =
           clientY -
-          (ref.current.offsetTop -
+          (ref.current!.offsetTop -
             (window.scrollY || window.pageYOffset || document.body.scrollTop));
 
         const dampen = 50;
         const xys = [
-          -(y - ref.current.clientHeight / 2) / dampen,
-          (x - ref.current.clientWidth / 2) / dampen,
+          -(y - ref.current!.clientHeight / 2) / dampen,
+          (x - ref.current!.clientWidth / 2) / dampen,
           1.07,
         ];
 
@@ -84,7 +61,7 @@ const Card = ({ children }) => {
       }}
       style={{
         zIndex: isHovered ? 2 : 1,
-        transform: animatedProps.xys.interpolate(
+        transform: animatedProps.xys.to(
           (x, y, s) =>
             `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
         ),
@@ -94,34 +71,8 @@ const Card = ({ children }) => {
     </animated.div>
   );
 };
-const Particles = ({ children }) => {
-  return (
-    <div style={{ position: "relative" }}>
-      <ReactParticles
-        params={particlesConfig}
-        style={{
-          position: "absolute",
-          zIndex: 1,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          top: 0,
-        }}
-      />
-      {children && <div style={{ position: "relative" }}>{children}</div>}
-    </div>
-  );
-};
 
-const Hero = ({ children }) => {
-  return (
-    <div className="hero">
-      <div className="hero-body">{children}</div>
-    </div>
-  );
-};
-
-const Image = ({ ratio, src, alt }) => {
+const Image = ({ ratio, src, alt }: ImageProps) => {
   return (
     <div className="image-container">
       <div className="image-inner-container">
@@ -146,7 +97,9 @@ const cards = [
     icon: <FontAwesomeIcon icon={faComputer} bounce pull="right" />,
     description: (
       <ul>
-        <li> JavaScript, React.js, node.js, TypeScript, SQL</li>
+        <li>
+          JavaScript, React.js, React Native, node.js, TypeScript, SQL, NoSQL
+        </li>
         <li>Python (pandas, Numpy, Matplotlib, seaborn, Dash etc.)</li>
         <li>SAP Finance & Controlling</li>
       </ul>
@@ -227,5 +180,34 @@ const cards = [
     imageRatio: 0 / 1030,
   },
 ];
+
+const Launch = () => {
+  return (
+    <>
+      <div className="main">
+        <div className="container">
+          <div className="row">
+            {cards.map((card, i) => (
+              <div className="column" key={i}>
+                <Card>
+                  <div className="card-title">
+                    {card.title}
+                    {card.icon}
+                  </div>
+                  <div className="card-body">{card.description}</div>
+                  <Image
+                    ratio={card.imageRatio}
+                    src={card.image}
+                    alt={card.alt}
+                  />
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Launch;

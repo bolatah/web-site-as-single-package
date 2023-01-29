@@ -1,5 +1,4 @@
 import { FormattedMessage } from "react-intl";
-import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
@@ -10,7 +9,7 @@ import TabsListUnstyled from "@mui/base/TabsListUnstyled";
 import TabPanelUnstyled from "@mui/base/TabPanelUnstyled";
 import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
 import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
-import { Divider } from "@mui/material";
+import { Card } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressBook, faBlog } from "@fortawesome/free-solid-svg-icons";
 
@@ -40,6 +39,23 @@ const grey = {
   900: "#24292f",
 };
 
+const ProjectCard = styled(Card)(
+  () => `       
+background-color: #EAE7DC;
+max-width: 80%;
+
+`
+);
+
+const TabPanel = styled(TabPanelUnstyled)(
+  () => `
+  font-size: 0.875rem;
+  padding: 20px 12px;
+  opacity: 0.6;
+  display:contents;
+ 
+  `
+);
 const Tab = styled(TabUnstyled)`
   color: black;
   cursor: pointer;
@@ -74,34 +90,33 @@ const Tab = styled(TabUnstyled)`
   }
 `;
 
-const TabPanel = styled(TabPanelUnstyled)(
-  () => `
-  width: 100%;
-  font-size: 0.875rem;
-  padding: 20px 12px;
-  opacity: 0.6;
-  `
-);
-
 const TabsList = styled(TabsListUnstyled)(
   () => `
-  
-  min-width: 400px;
   border-radius: 12px;
   margin-bottom: 16px;
   margin-top: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: space-between;
+  display: inline-flex; 
+  flex-flow: column wrap;
 
+  `
+);
+
+const Tabs = styled(TabsUnstyled)(
+  () => `
+  margin-bottom: 16px;
+  margin-top: 16px;
+  display: inline-flex; 
+  flex-flow: row wrap;
+  gap: 20px 20px;
+  height: 100%;
+  justify-content:space-evenly;
   `
 );
 
 const Projects = () => {
   return (
     <>
-      <TabsUnstyled orientation="vertical" defaultValue={0}>
+      <Tabs defaultValue={0}>
         <TabsList>
           <Tab>
             <FontAwesomeIcon icon={faBlog} style={{ marginRight: "0.5rem" }} />
@@ -114,23 +129,26 @@ const Projects = () => {
             />
             Contact Manager
           </Tab>
+          {/*     <Tab>
+            <Avatar
+              src="android.svg"
+              sx={{ width: 20, height: 20, marginRight: "0.5em" }}
+            />
+            Mobile-Bolatah
+          </Tab> */}
         </TabsList>
-        <Divider />
+
         <TabPanel value={0}>
-          <Card
-            sx={{
-              backgroundColor: "#EAE7DC",
-              marginBottom: "5rem",
-            }}
-          >
+          <ProjectCard>
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h5">
                 Open-Blog
               </Typography>
               <Typography
                 variant="body2"
                 color="text.secondary"
                 textAlign="justify"
+                paragraph
               >
                 <FormattedMessage id="open_blog_description" />
               </Typography>
@@ -151,24 +169,19 @@ const Projects = () => {
                 Github Codes
               </Button>
             </CardActions>
-          </Card>
+          </ProjectCard>
         </TabPanel>
         <TabPanel value={1}>
-          <Card
-            sx={{
-              margin: "0 auto",
-              backgroundColor: "#EAE7DC",
-              marginBottom: "5rem",
-            }}
-          >
+          <ProjectCard>
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h5">
                 Contact Manager
               </Typography>
               <Typography
                 variant="body2"
                 color="text.secondary"
                 textAlign="justify"
+                paragraph
               >
                 <FormattedMessage id="contact_manager_description" />
               </Typography>
@@ -189,9 +202,9 @@ const Projects = () => {
                 Github Codes
               </Button>
             </CardActions>
-          </Card>
+          </ProjectCard>
         </TabPanel>
-      </TabsUnstyled>
+      </Tabs>
     </>
   );
 };

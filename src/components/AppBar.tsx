@@ -12,9 +12,17 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { faLeftLong } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const pages = [
-  { id: 1, title: <FormattedMessage id="home" />, url: "/" },
+  window.location.pathname !== "/"
+    ? {
+        id: 1,
+        title: <FontAwesomeIcon icon={faLeftLong} />,
+        url: "/",
+      }
+    : null,
   {
     id: 2,
     title: <FormattedMessage id="resume" />,
@@ -100,23 +108,26 @@ const ResponsiveAppBar = () => {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem
-                    component={Button}
-                    key={page.id}
-                    href={page.url}
-                    onClick={handleCloseNavMenu}
-                  >
-                    <Typography
-                      sx={{
-                        textTransform: "none",
-                      }}
-                      textAlign="center"
+                {pages.map((page) =>
+                  page !== null ? (
+                    <MenuItem
+                      component={Button}
+                      key={page.id}
+                      href={page.url}
+                      onClick={handleCloseNavMenu}
+                      sx={{ justifyContent: "center" }}
                     >
-                      {page.title}
-                    </Typography>
-                  </MenuItem>
-                ))}
+                      <Typography
+                        sx={{
+                          textTransform: "none",
+                        }}
+                        textAlign="center"
+                      >
+                        {page?.title}
+                      </Typography>
+                    </MenuItem>
+                  ) : null
+                )}
               </Menu>
             </Box>
             <Typography
@@ -128,27 +139,29 @@ const ResponsiveAppBar = () => {
               Ahmet Bolat
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {pages.map((page) => (
-                <Button
-                  key={page.id}
-                  onClick={handleCloseNavMenu}
-                  href={page.url}
-                  size="large"
-                  fullWidth
-                  sx={{
-                    my: 2,
-                    color: "white",
-                    display: "flex",
+              {pages.map((page) =>
+                page !== null ? (
+                  <Button
+                    key={page.id}
+                    onClick={handleCloseNavMenu}
+                    href={page.url}
+                    size="large"
+                    fullWidth
+                    sx={{
+                      my: 2,
+                      color: "white",
+                      display: "flex",
 
-                    alignItems: "center",
-                    justifyContent: "center",
-                    zIndex: 999,
-                    textTransform: "none",
-                  }}
-                >
-                  {page.title}
-                </Button>
-              ))}
+                      alignItems: "center",
+                      justifyContent: "center",
+                      zIndex: 999,
+                      textTransform: "none",
+                    }}
+                  >
+                    {page.title}
+                  </Button>
+                ) : null
+              )}
             </Box>
 
             <Avatar alt="Ahmet Bolat" src="ahmet_bolat.png" />

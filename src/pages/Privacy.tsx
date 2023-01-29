@@ -12,7 +12,7 @@ const Privacy = () => {
       <Typography variant="body1" paragraph>
         Diese Datenschutzerklärung soll die Nutzer dieser Website über die Art,
         den Umfang und den Zweck der Erhebung und Verwendung personenbezogener
-        Daten durch den Websitebetreiber Hasan Uzun informieren. Der
+        Daten durch den Websitebetreiber Ahmet Bolat informieren. Der
         Websitebetreiber nimmt Ihren Datenschutz sehr ernst und behandelt Ihre
         personenbezogenen Daten vertraulich und entsprechend der gesetzlichen
         Vorschriften. Da durch neue Technologien und die ständige
@@ -26,7 +26,6 @@ const Privacy = () => {
         Zugriffsdaten
       </Typography>
       <Typography variant="body1" paragraph>
-        {" "}
         Ich, der Websitebetreiber bzw. Seitenprovider, erhebe aufgrund meines
         berechtigten Interesses (s. Art. 6 Abs. 1 lit. f. DSGVO) Daten über
         Zugriffe auf die Website und speichere diese als “Server-Logfiles” auf

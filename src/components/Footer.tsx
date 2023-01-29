@@ -169,7 +169,6 @@ function Footer(props: any) {
                   onClick={handleCloseUserMenu}
                   defaultValue={props.currentLocale}
                   value={language.code}
-                  sx={{ backgroundColor: "#eae7dc" }}
                 >
                   <Button disabled component="span">
                     <FontAwesomeIcon

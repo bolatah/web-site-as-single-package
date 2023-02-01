@@ -9,6 +9,7 @@ import {
   faArrowRightLong,
 } from "@fortawesome/free-solid-svg-icons";
 import { Outlet } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
 type ImageProps = {
   ratio: number;
@@ -158,7 +159,7 @@ const cards = [
               Server-side Development with NodeJS, Express and MongoDB
             </a>
           </li>
-          {window.matchMedia("(min-width: 1100px)") ? (
+          {!isMobile ? (
             <a href="https://www.linkedin.com/in/ahmet-b-01196183/details/certifications/">
               <FontAwesomeIcon
                 icon={faArrowRightLong}

@@ -158,7 +158,7 @@ const cards = [
               Server-side Development with NodeJS, Express and MongoDB
             </a>
           </li>
-          {window.matchMedia("(min-width: 1000px)") ? (
+          {window.matchMedia("(min-width: 1100px)") ? (
             <a href="https://www.linkedin.com/in/ahmet-b-01196183/details/certifications/">
               <FontAwesomeIcon
                 icon={faArrowRightLong}

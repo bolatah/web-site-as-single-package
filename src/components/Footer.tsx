@@ -97,7 +97,7 @@ function Footer(props: any) {
               <FormattedMessage id="all_rights_reserved" />
             </Typography>
 
-            <Button href="/privacy" variant="contained">
+            <Button href="privacy" variant="contained">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -123,7 +123,7 @@ function Footer(props: any) {
                 <FormattedMessage id="privacy" />
               </Box>
             </Button>
-            <Button href="/imprint" variant="contained">
+            <Button href="imprint" variant="contained">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"

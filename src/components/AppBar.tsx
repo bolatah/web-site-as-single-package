@@ -28,8 +28,8 @@ const pages = [
     title: <FormattedMessage id="resume" />,
     url: "https://gitconnected.com/bolatah/resume",
   },
-  { id: 3, title: <FormattedMessage id="interests" />, url: "/interests" },
-  { id: 4, title: <FormattedMessage id="projects" />, url: "/projects" },
+  { id: 3, title: <FormattedMessage id="interests" />, url: "interests" },
+  { id: 4, title: <FormattedMessage id="projects" />, url: "projects" },
   {
     id: 5,
     title: <FormattedMessage id="blogs" />,

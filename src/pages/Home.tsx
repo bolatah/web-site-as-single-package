@@ -8,6 +8,7 @@ import {
   faGraduationCap,
   faArrowRightLong,
 } from "@fortawesome/free-solid-svg-icons";
+import { Outlet } from "react-router-dom";
 
 type ImageProps = {
   ratio: number;
@@ -157,13 +158,23 @@ const cards = [
               Server-side Development with NodeJS, Express and MongoDB
             </a>
           </li>
-          <a href="https://www.linkedin.com/in/ahmet-b-01196183/details/certifications/">
-            <FontAwesomeIcon
-              icon={faArrowRightLong}
-              style={{ marginRight: "1rem" }}
-            />
-            <FormattedMessage id="more_certificates" />
-          </a>
+          {window.matchMedia("(min-width: 480px)") ? (
+            <a href="https://www.linkedin.com/in/ahmet-b-01196183/details/certifications/">
+              <FontAwesomeIcon
+                icon={faArrowRightLong}
+                style={{ marginRight: "1rem" }}
+              />
+              <FormattedMessage id="more_certificates" />
+            </a>
+          ) : (
+            <a href="https://www.linkedin.com/in/ahmet-b-01196183/">
+              <FontAwesomeIcon
+                icon={faArrowRightLong}
+                style={{ marginRight: "1rem" }}
+              />
+              <FormattedMessage id="more_certificates" />
+            </a>
+          )}
         </ul>
         <ul style={{ listStyleType: "circle " }}>
           <li>
@@ -181,33 +192,37 @@ const cards = [
   },
 ];
 
-const Launch = () => {
+const Home = () => {
   return (
     <>
-      <div className="main">
-        <div className="container">
-          <div className="row">
-            {cards.map((card, i) => (
-              <div className="column" key={i}>
-                <Card>
-                  <div className="card-title">
-                    {card.title}
-                    {card.icon}
-                  </div>
-                  <div className="card-body">{card.description}</div>
-                  <Image
-                    ratio={card.imageRatio}
-                    src={card.image}
-                    alt={card.alt}
-                  />
-                </Card>
-              </div>
-            ))}
+      {window.location.pathname === "/" ? (
+        <div className="main">
+          <div className="container">
+            <div className="row">
+              {cards.map((card, i) => (
+                <div className="column" key={i}>
+                  <Card>
+                    <div className="card-title">
+                      {card.title}
+                      {card.icon}
+                    </div>
+                    <div className="card-body">{card.description}</div>
+                    <Image
+                      ratio={card.imageRatio}
+                      src={card.image}
+                      alt={card.alt}
+                    />
+                  </Card>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <Outlet />
+      )}
     </>
   );
 };
 
-export default Launch;
+export default Home;

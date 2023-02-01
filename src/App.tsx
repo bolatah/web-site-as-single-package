@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { IntlProvider } from "react-intl";
 import ResponsiveAppBar from "./components/AppBar";
 import Interests from "./pages/Interests";
-import Launch from "./pages/Launch";
+import Home from "./pages/Home";
 import Privacy from "./pages/Privacy";
 import MoreCertificates from "./pages/MoreCertificates";
 import Imprint from "./pages/Imprint";
@@ -14,6 +14,14 @@ import Footer from "./components/Footer";
 import ParticlesContainer from "./components/Particles";
 
 const hostLocal = navigator.language;
+
+export const routes = [
+  { id: 1, path: "interests", element: <Interests /> },
+  { id: 2, path: "projects", element: <Projects /> },
+  { id: 3, path: "privacy", element: <Privacy /> },
+  { id: 4, path: "moreCertificates", element: <MoreCertificates /> },
+  { id: 5, path: "imprint", element: <Imprint /> },
+];
 
 function App() {
   const [currentLocale, setCurrentLocale] = useState(
@@ -35,12 +43,11 @@ function App() {
       <ResponsiveAppBar />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Launch />} />
-          <Route path="/interests" element={<Interests />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/moreCertificates" element={<MoreCertificates />} />
-          <Route path="/imprint" element={<Imprint />} />
+          <Route path="/" element={<Home />}>
+            {routes.map((route) => (
+              <Route key={route.id} path={route.path} element={route.element} />
+            ))}
+          </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

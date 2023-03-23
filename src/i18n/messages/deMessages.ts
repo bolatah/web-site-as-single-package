@@ -38,6 +38,8 @@ export const deMessages = {
     "Open Blog ist eine MERN (MongoDB, Express, React und Node) Stack-Anwendung mit Typescript. Benutzer kann sich mit Firebase-Authentifizierung anmelden und CRUD-Aktionen wie das Erstellen, Lesen, Aktualisieren und Löschen von Blogeinträgen in Open Blog durchführen.",
   contact_manager_description:
     "Contact Manager ist wieder ein MERN (MongoDB, Express, React und Node) Stack und dieses Mal wird eine Express Middleware, Passport-JWT Strategie verwendet. Nach der Registrierung kann der Benutzer Kontaktinformationen mit einem Bild hinzufügen, ändern oder löschen.",
+  smart_image_to_pdf_converter:
+    "Smart Image-to-PDF Converter ist eine native Android-App, die mit dem React-Native-Framework entwickelt wurde.  Benutzer können Fotos machen oder Bilder aus ihrer Gerätegalerie hinzufügen und sie dann später als ein- oder mehrseitige PDFs teilen. Die App ist besonders hilfreich für das einfache Einreichen von Dokumenten und auch sicher, da keine Daten vom Gerät übertragen werden. Die Anwendung kann im Playstore heruntergeladen werden.",
   start_button: "Starten",
   // Contact-me
   name: "Name",

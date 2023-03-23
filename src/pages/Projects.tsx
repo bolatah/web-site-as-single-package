@@ -11,7 +11,9 @@ import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled";
 import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
 import { Card } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { faAddressBook, faBlog } from "@fortawesome/free-solid-svg-icons";
+import { faAndroid } from "@fortawesome/free-brands-svg-icons";
 
 const blue = {
   50: "#F0F7FF",
@@ -96,8 +98,8 @@ const TabsList = styled(TabsListUnstyled)(
   margin-bottom: 16px;
   margin-top: 16px;
   display: inline-flex; 
-  flex-flow: column wrap;
-
+  flex-flow: initial;
+  flex-direction: column;
   `
 );
 
@@ -106,7 +108,7 @@ const Tabs = styled(TabsUnstyled)(
   margin-bottom: 16px;
   margin-top: 16px;
   display: inline-flex; 
-  flex-flow: row wrap;
+  flex-flow: initial;
   gap: 20px 20px;
   height: 100%;
   justify-content:space-evenly;
@@ -119,6 +121,13 @@ const Projects = () => {
       <Tabs defaultValue={0}>
         <TabsList>
           <Tab>
+            <FontAwesomeIcon
+              icon={faAndroid}
+              style={{ marginRight: "0.5rem" }}
+            />
+            Smart Converter
+          </Tab>
+          <Tab>
             <FontAwesomeIcon icon={faBlog} style={{ marginRight: "0.5rem" }} />
             Open-Blog
           </Tab>
@@ -129,16 +138,41 @@ const Projects = () => {
             />
             Contact Manager
           </Tab>
-          {/*     <Tab>
-            <Avatar
-              src="android.svg"
-              sx={{ width: 20, height: 20, marginRight: "0.5em" }}
-            />
-            Mobile-Bolatah
-          </Tab> */}
         </TabsList>
-
         <TabPanel value={0}>
+          <ProjectCard>
+            <CardContent>
+              <Typography gutterBottom variant="h5">
+                Smart Image-to-PDF Converter
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                textAlign="justify"
+                paragraph
+              >
+                <FormattedMessage id="smart_image_to_pdf_converter" />
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                variant="outlined"
+                href="https://play.google.com/store/apps/details?id=com.bolatah.smartImageToPDFConverter"
+              >
+                <FormattedMessage id="start_button" />
+              </Button>
+              <Button
+                size="small"
+                variant="contained"
+                href="https://github.com/bolatah/Smart-Image-to-PDF-Converter"
+              >
+                Github Codes
+              </Button>
+            </CardActions>
+          </ProjectCard>
+        </TabPanel>
+        <TabPanel value={1}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">
@@ -171,7 +205,7 @@ const Projects = () => {
             </CardActions>
           </ProjectCard>
         </TabPanel>
-        <TabPanel value={1}>
+        <TabPanel value={2}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">

@@ -38,6 +38,8 @@ export const trMessages = {
     "Open Blog, Typescript ile kodlanmış bir MERN (MongoDB, Express, React ve Node) Stack uygulamasıdır. Kullanıcı, Firebase Authentication ile  giriş yapabilir ve sonrasında CRUD islemleri gibi blog oluşturabilir, okuyabilir, güncelleyebilir ve silebilir.",
   contact_manager_description:
     "Contact Manager yine bir MERN (MongoDB, Express, React ve Node) Stack uygulaması olup bu defa Express aracısı (middleware) olan Passport-JWT stratejsi kullanılmıştır. Kullanıcı kayıt olduktan sonra bir rehber gibi resimli kişi bilgileri ekleyebilir, değiştirebilir ya da silebilir",
+  smart_image_to_pdf_converter:
+    "Smart Image-to-PDF dönüştürücü, React-Native  ile tasarlanmış native bir android uygulamasıdır. Uygulama ile kullanıcılar fotoğraf çekebilir veya cihazlarının galerilerinden resim ekleyebilir ve sonrasında bu resimleri tek veya çok sayfalı PDF olarak paylaşabilirler. Özellikle belgelerin kolay ve pratik gönderimi için uygundur ve cihazdan dışarıya veri aktarımı olmadığı için güvenlidir. Uygulamayı Playstore'da bulabilirsiniz.",
   start_button: "Başla",
   // Contact-me
   name: "İsim",

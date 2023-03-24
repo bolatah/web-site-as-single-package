@@ -191,7 +191,7 @@ const Projects = () => {
               <Button
                 size="small"
                 variant="outlined"
-                href="https://blog.bolatah.com/"
+                href="https://bolatah-blog-app.herokuapp.com"
               >
                 <FormattedMessage id="start_button" />
               </Button>

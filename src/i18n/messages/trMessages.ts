@@ -34,6 +34,8 @@ export const trMessages = {
   languages_content_third_part:
     "Yabancılara Türkçe dersleri verdim ve yabancılara Türkçe eğitimi ile ilgili sistematik bir anlayışa da sahip oldum.",
   // Projects
+  open_blog_v2_description:
+    "Aşağıdaki uygulamanın (Open-Blog), bir React Framework olan Next.js ile Server-Side-Rendering uygulanarak güncellenmiş halidir.",
   open_blog_description:
     "Open Blog, Typescript ile kodlanmış bir MERN (MongoDB, Express, React ve Node) Stack uygulamasıdır. Kullanıcı, Firebase Authentication ile  giriş yapabilir ve sonrasında CRUD islemleri gibi blog oluşturabilir, okuyabilir, güncelleyebilir ve silebilir.",
   contact_manager_description:

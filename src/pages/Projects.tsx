@@ -129,6 +129,10 @@ const Projects = () => {
           </Tab>
           <Tab>
             <FontAwesomeIcon icon={faBlog} style={{ marginRight: "0.5rem" }} />
+            Open-Blog-v2
+          </Tab>
+          <Tab>
+            <FontAwesomeIcon icon={faBlog} style={{ marginRight: "0.5rem" }} />
             Open-Blog
           </Tab>
           <Tab>
@@ -172,7 +176,41 @@ const Projects = () => {
             </CardActions>
           </ProjectCard>
         </TabPanel>
+
         <TabPanel value={1}>
+          <ProjectCard>
+            <CardContent>
+              <Typography gutterBottom variant="h5">
+                Open-Blog-v2
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                textAlign="justify"
+                paragraph
+              >
+                <FormattedMessage id="open_blog_v2_description" />
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                variant="outlined"
+                href="https://blog-app-with-nextjs.herokuapp.com/blogs/bolatahBlogs"
+              >
+                <FormattedMessage id="start_button" />
+              </Button>
+              <Button
+                size="small"
+                variant="contained"
+                href="https://github.com/bolatah/blog-app/tree/nextjs"
+              >
+                Github Codes
+              </Button>
+            </CardActions>
+          </ProjectCard>
+        </TabPanel>
+        <TabPanel value={2}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">
@@ -205,7 +243,7 @@ const Projects = () => {
             </CardActions>
           </ProjectCard>
         </TabPanel>
-        <TabPanel value={2}>
+        <TabPanel value={3}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">

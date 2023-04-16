@@ -33,7 +33,7 @@ const pages = [
   {
     id: 5,
     title: <FormattedMessage id="blogs" />,
-    url: "https://blog.bolatah.com/#/bolatah-blogs",
+    url: "https://blog-app-with-nextjs.herokuapp.com/blogs/bolatahBlogs",
   },
 ];
 

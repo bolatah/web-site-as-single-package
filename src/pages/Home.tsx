@@ -100,8 +100,8 @@ const cards = [
     description: (
       <ul>
         <li>
-          JavaScript, React.js, React Native, node.js, Next.js, TypeScript, SQL,
-          NoSQL
+          JavaScript, React.js, React Native, node.js, Next.js, TypeScript,
+          Docker, SQL, NoSQL
         </li>
         <li>Python (pandas, Numpy, Matplotlib, seaborn, Dash etc.)</li>
         <li>SAP Finance & Controlling</li>

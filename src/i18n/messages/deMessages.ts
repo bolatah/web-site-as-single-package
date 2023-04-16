@@ -35,7 +35,7 @@ export const deMessages = {
     "Ich habe auch Türkischunterricht für Ausländer gegeben und dabei ein systematisches Verständnis für das Unterrichten der Fremdsprache erworben.",
   // Projects
   open_blog_v2_description:
-    "Aktualisierte Version der unteren Anwendung (Open-Blog) mit dem React-Framework Nextjs unter Verwendung von Server-Side-Rendering",
+    "Aktualisierte Version der unteren Anwendung (Open-Blog) mit dem React-Framework Nextjs unter Verwendung von Server-Side-Rendering und Docker-Bereitstellung.",
   open_blog_description:
     "Open Blog ist eine MERN (MongoDB, Express, React und Node) Stack-Anwendung mit Typescript. Benutzer kann sich mit Firebase-Authentifizierung anmelden und CRUD-Aktionen wie das Erstellen, Lesen, Aktualisieren und Löschen von Blogeinträgen in Open Blog durchführen.",
   contact_manager_description:

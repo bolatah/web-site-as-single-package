@@ -196,7 +196,7 @@ const Projects = () => {
               <Button
                 size="small"
                 variant="outlined"
-                href="https://blog-app-with-nextjs.herokuapp.com/blogs/bolatahBlogs"
+                href="https://blog-app-with-nextjs.herokuapp.com"
               >
                 <FormattedMessage id="start_button" />
               </Button>

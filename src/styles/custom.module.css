@@ -1,0 +1,166 @@
+
+   .main {
+    display: flex;
+    flex-direction: column;
+     flex: 1 0 auto;
+    width: 100%;
+    padding: 1.5rem;
+     
+    @media screen and (min-width: 980px) {
+      padding: 1.5 5rem;
+    }
+  }
+  
+  .container {
+    max-width: 1200px;
+    display:flex;
+    margin: 0 auto;
+    @media screen and (min-width: 1440px) {
+      max-width: 1500px;
+  }
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    @media screen and (min-width: 980px) {
+      width: 33.33333333333333%;
+    }
+    
+  }
+  
+  .card {
+    padding: 30px;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    will-change: transform;
+    background-color: #EAE7DC;
+    @media screen and (max-width: 980px) {
+      width: 100%;
+    }
+  
+  }
+  
+   .cardTitle {
+    font-size: 22px;
+    font-weight: 600;
+    display: inline-block;
+    @media screen and (min-width: 1440px) {
+      font-size: 26px;
+  }
+  }  
+
+  .cardIcon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    display: inline-block;
+
+  }
+  
+  .cardBody {
+    line-height: 1.5;
+    font-size: 16px;
+    @media screen and (min-width: 576px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 22px;
+  }
+  }
+  
+  #openBlogv2 {
+    @media screen and (min-width: 576px) {
+      min-width: 85vw
+    }
+  }
+
+  .image {  
+      width: 100%;
+  }
+  
+  .imageInnerContainer {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 250px;
+  }
+  
+  .ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-top: ratio * 100 + "%",
+  }
+  
+  .ratioInner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  #footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    /* background-color: rgb(142, 141, 138); */
+    font-size: 16px;
+    z-index: 1205;
+    text-align: center;
+    margin: auto 0;
+    
+    
+    @media(max-width:572px){
+      font-size: 10px;
+      }  
+  }
+  
+  
+  
+  .span-text {
+  color: #fff;
+  @media screen and (max-width: 845px) {
+    display: none;
+  }
+  }
+    
+  
+  
+  .path {
+    color: #fff12f;
+  }
+  
+  
+  .form-demo .card {
+    min-width: 450px;
+  }
+  .form-demo .card form {
+    margin-top: 2rem;
+  }
+  .form-demo .card .field {
+    margin-bottom: 1.5rem;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .form-demo .card {
+        width: 80%;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .form-demo.card {
+        width: 100%;
+        min-width: 0;
+    }
+  }
+     

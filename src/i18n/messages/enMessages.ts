@@ -3,7 +3,7 @@ export const enMessages = {
   home: "Home",
   resume: "Resume",
   interests: "Interests",
-  contact_me: "Contact Me",
+  contact_me: "Contact",
   blogs: "Blogs",
   projects: "Projects",
   // Launch-cards
@@ -35,6 +35,8 @@ export const enMessages = {
     "I gave also Turkish classes to foreigners and meanwhile gained a systematic understanding of teaching the foreing language.",
 
   // Projects
+  open_blog_v2_description:
+    "Updated version of the app below (Open-Blog) with React framework Nextjs by using Server-Side-Rendering methods and deploying with Docker container.",
   open_blog_description:
     "Open Blog is a MERN (MongoDB, Express, React and Node) stack application coded with Typescript. User can log in with Firebase Authentication and  (CRUD) create, read, update and delete blog posts in Open Blog.",
   contact_manager_description:

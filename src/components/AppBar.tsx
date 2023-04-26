@@ -8,34 +8,15 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
+import AvatarLink from "../components/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import { useRouter } from "next/router";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { faLeftLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const pages = [
-  window.location.pathname !== "/"
-    ? {
-        id: 1,
-        title: <FontAwesomeIcon icon={faLeftLong} />,
-        url: "/",
-      }
-    : null,
-  {
-    id: 2,
-    title: <FormattedMessage id="resume" />,
-    url: "https://gitconnected.com/bolatah/resume",
-  },
-  { id: 3, title: <FormattedMessage id="interests" />, url: "interests" },
-  { id: 4, title: <FormattedMessage id="projects" />, url: "projects" },
-  {
-    id: 5,
-    title: <FormattedMessage id="blogs" />,
-    url: "https://blog.bolatah.com/#/bolatah-blogs",
-  },
-];
+import { useEffect } from "react";
+import styles from "../styles/custom.module.css";
 
 const theme = createTheme({
   palette: {
@@ -52,6 +33,7 @@ const theme = createTheme({
 });
 
 const ResponsiveAppBar = () => {
+  const router = useRouter();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -63,7 +45,31 @@ const ResponsiveAppBar = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  const pages = [
+    router.pathname !== "/"
+      ? {
+          id: 1,
+          title: (
+            <FontAwesomeIcon icon={faLeftLong} className={styles.cardIcon} />
+          ),
+          url: "/",
+        }
+      : null,
+    {
+      id: 2,
+      title: <FormattedMessage id="resume" />,
+      url: "https://gitconnected.com/bolatah/resume",
+    },
+    { id: 3, title: <FormattedMessage id="interests" />, url: "interests" },
+    { id: 4, title: <FormattedMessage id="projects" />, url: "projects" },
+    {
+      id: 5,
+      title: <FormattedMessage id="blogs" />,
+      url: "https://blog-app-with-nextjs.herokuapp.com/blogs/bolatahBlogs",
+    },
+  ];
 
+  useEffect(() => {}, []);
   return (
     <ThemeProvider theme={theme}>
       <AppBar position="static" color="secondary">
@@ -164,7 +170,7 @@ const ResponsiveAppBar = () => {
               )}
             </Box>
 
-            <Avatar alt="Ahmet Bolat" src="ahmet_bolat.png" />
+            <AvatarLink />
           </Toolbar>
         </Container>
       </AppBar>

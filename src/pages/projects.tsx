@@ -12,7 +12,17 @@ import TabUnstyled, { tabUnstyledClasses } from "@mui/base/TabUnstyled";
 import { Card } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../styles/custom.module.css";
-import { faAddressBook, faBlog } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAddressBook,
+  faAddressCard,
+  faAtlas,
+  faBlog,
+  faBolt,
+  faFile,
+  faFileWord,
+  faLanguage,
+  faSdCard,
+} from "@fortawesome/free-solid-svg-icons";
 import { faAndroid } from "@fortawesome/free-brands-svg-icons";
 
 const blue = {
@@ -125,6 +135,10 @@ const Projects = () => {
             Smart Converter
           </Tab>
           <Tab>
+            <FontAwesomeIcon icon={faBolt} style={{ marginRight: "0.5rem" }} />
+            Flashcard-Session
+          </Tab>
+          <Tab>
             <FontAwesomeIcon icon={faBlog} style={{ marginRight: "0.5rem" }} />
             Open-Blog-v2
           </Tab>
@@ -140,6 +154,7 @@ const Projects = () => {
             Contact Manager
           </Tab>
         </TabsList>
+
         <TabPanel value={0}>
           <ProjectCard>
             <CardContent>
@@ -178,6 +193,39 @@ const Projects = () => {
           <ProjectCard className={styles.openBlogv2}>
             <CardContent>
               <Typography gutterBottom variant="h5">
+                Flashcard-Session
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                textAlign="justify"
+                paragraph
+              >
+                <FormattedMessage id="flashcard_session_description" />
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                variant="outlined"
+                href="https://flashcard-session-25f1181f9aa5.herokuapp.com/"
+              >
+                <FormattedMessage id="start_button" />
+              </Button>
+              <Button
+                size="small"
+                variant="contained"
+                href="https://github.com/bolatah/flashcard-session"
+              >
+                Github Codes
+              </Button>
+            </CardActions>
+          </ProjectCard>
+        </TabPanel>
+        <TabPanel value={2}>
+          <ProjectCard className={styles.openBlogv2}>
+            <CardContent>
+              <Typography gutterBottom variant="h5">
                 Open-Blog-v2
               </Typography>
               <Typography
@@ -207,7 +255,7 @@ const Projects = () => {
             </CardActions>
           </ProjectCard>
         </TabPanel>
-        <TabPanel value={2}>
+        <TabPanel value={3}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">
@@ -240,7 +288,7 @@ const Projects = () => {
             </CardActions>
           </ProjectCard>
         </TabPanel>
-        <TabPanel value={3}>
+        <TabPanel value={4}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">

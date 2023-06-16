@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import dynamic from "next/dynamic";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -6,8 +7,12 @@ import { LOCALES } from "../i18n/locales";
 import { messages } from "../i18n/messages/allMessages";
 import { IntlProvider } from "react-intl";
 import ParticlesContainer from "../components/Particles";
-import Footer from "@/components/Footer";
+//import Footer from "@/components/Footer";
 import AppBar from "@/components/AppBar";
+
+const Footer = dynamic(() => import("@/components/Footer"), {
+  ssr: false, // Disable server-side rendering
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   const [currentLocale, setCurrentLocale] = useState(LOCALES.ENGLISH);

@@ -34,6 +34,9 @@ export const deMessages = {
   languages_content_third_part:
     "Ich habe auch Türkischunterricht für Ausländer gegeben und dabei ein systematisches Verständnis für das Unterrichten der Fremdsprache erworben.",
   // Projects
+
+  flashcard_session_description:
+    "Die Anwendung, die für das Sprachenlernen entwickelt wurde, zielt darauf ab, die Identität des Benutzers über den Google-Authentifizierung-Dienst zu authentifizieren und die Sitzung mit next_auth.js aufrechtzuerhalten. Anschließend sollen personalisierte Karteikarten für den Benutzer erstellt werden, die Vorschau, Änderung und Löschung ermöglichen. Diese Anwendung wurde mit dem React-Framework Next.js erstellt, wobei das State Management auf der Frontend-Seite mit Redux erfolgt, und die erstellten Karteikarten werden in einer MongoDB-Datenbank gespeichert.",
   open_blog_v2_description:
     "Aktualisierte Version der unteren Anwendung (Open-Blog) mit dem React-Framework Nextjs unter Verwendung von Server-Side-Rendering und Docker-Bereitstellung.",
   open_blog_description:

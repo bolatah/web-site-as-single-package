@@ -35,6 +35,8 @@ export const enMessages = {
     "I gave also Turkish classes to foreigners and meanwhile gained a systematic understanding of teaching the foreing language.",
 
   // Projects
+  flashcard_session_description:
+    "The application, designed for language learning, aims to authenticate the user with the Google Authentication Provider service, maintain the session persistence with the next_auth.js, and then create personalized flashcards for the user, allowing them to preview, modify, and delete. It is built on the front-end by using the React framework Next.js, ensuring state management with Redux, and the flashcards created are stored in a database with MongoDB.",
   open_blog_v2_description:
     "Updated version of the app below (Open-Blog) with React framework Nextjs by using Server-Side-Rendering methods and deploying with Docker container.",
   open_blog_description:

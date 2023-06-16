@@ -34,6 +34,8 @@ export const trMessages = {
   languages_content_third_part:
     "Yabancılara Türkçe dersleri verdim ve yabancılara Türkçe eğitimi ile ilgili sistematik bir anlayışa da sahip oldum.",
   // Projects
+  flashcard_session_description:
+    "Dil öğrenmeye yönelik uygulama, google hizmeti ile kullanıcının kimlik doğrulaması ve next_auth.js ile oturumun sürekli kalması sağlanarak sonrasında kullanıcıya özel flashcardları yaratmayı, bunları önizlemeyi, modifiye etmeyi ve silmeyi amaçlar. React framwork olan Next.js ile düzenlenerek yapılmış, önyüzde Redux ile durum yönetimi sağlanmış olup MongoDB ile yaratılan flashcardlar bir veritabanına aktarılmaktadır. ",
   open_blog_v2_description:
     "Aşağıdaki uygulamanın (Open-Blog), bir React Framework olan Next.js ile Server-Side-Rendering ve Docker-Deployment uygulanarak güncellenmiş halidir.",
   open_blog_description:

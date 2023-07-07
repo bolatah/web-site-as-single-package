@@ -36,6 +36,8 @@ export const trMessages = {
   // Projects
   flashcard_session_description:
     "Dil öğrenmeye yönelik uygulama, google hizmeti ile kullanıcının kimlik doğrulaması ve next_auth.js ile oturumun sürekli kalması sağlanarak sonrasında kullanıcıya özel flashcardları yaratmayı, bunları önizlemeyi, modifiye etmeyi ve silmeyi amaçlar. React framwork olan Next.js ile düzenlenerek yapılmış, önyüzde Redux ile durum yönetimi sağlanmış olup MongoDB ile yaratılan flashcardlar bir veritabanına aktarılmaktadır. ",
+  turkish_verb_conjugator_description:
+    "Java programlama dili ve Spring Boot çerçevesi kullanılarak yapılan uygulama Zemberek-NLP (Nature Language Processing) kütüphanesinden faydalanarak farklı zamirlere ve zamanlara göre Türkçe'de fiillerin çekimini amaçlamaktadır.",
   open_blog_v2_description:
     "Aşağıdaki uygulamanın (Open-Blog), bir React Framework olan Next.js ile Server-Side-Rendering ve Docker-Deployment uygulanarak güncellenmiş halidir.",
   open_blog_description:

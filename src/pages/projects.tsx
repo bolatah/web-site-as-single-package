@@ -18,12 +18,13 @@ import {
   faAtlas,
   faBlog,
   faBolt,
+  faBuilding,
   faFile,
   faFileWord,
   faLanguage,
   faSdCard,
 } from "@fortawesome/free-solid-svg-icons";
-import { faAndroid } from "@fortawesome/free-brands-svg-icons";
+import { faAndroid, faJava } from "@fortawesome/free-brands-svg-icons";
 
 const blue = {
   50: "#F0F7FF",
@@ -139,6 +140,10 @@ const Projects = () => {
             Flashcard-Session
           </Tab>
           <Tab>
+            <FontAwesomeIcon icon={faJava} style={{ marginRight: "0.5rem" }} />
+            Turkish-Verb-Conjugator
+          </Tab>
+          <Tab>
             <FontAwesomeIcon icon={faBlog} style={{ marginRight: "0.5rem" }} />
             Open-Blog-v2
           </Tab>
@@ -222,7 +227,42 @@ const Projects = () => {
             </CardActions>
           </ProjectCard>
         </TabPanel>
+
         <TabPanel value={2}>
+          <ProjectCard className={styles.openBlogv2}>
+            <CardContent>
+              <Typography gutterBottom variant="h5">
+                Turkish-Verb-Conjugator
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                textAlign="justify"
+                paragraph
+              >
+                <FormattedMessage id="turkish_verb_conjugator_description" />
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                variant="outlined"
+                href="https://turkish-verb-conjugator-d35eb8c56040.herokuapp.com/"
+              >
+                <FormattedMessage id="start_button" />
+              </Button>
+              <Button
+                size="small"
+                variant="contained"
+                href="https://github.com/bolatah/turkish-verb-conjugator"
+              >
+                Github Codes
+              </Button>
+            </CardActions>
+          </ProjectCard>
+        </TabPanel>
+
+        <TabPanel value={3}>
           <ProjectCard className={styles.openBlogv2}>
             <CardContent>
               <Typography gutterBottom variant="h5">
@@ -255,7 +295,8 @@ const Projects = () => {
             </CardActions>
           </ProjectCard>
         </TabPanel>
-        <TabPanel value={3}>
+
+        <TabPanel value={4}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">
@@ -288,7 +329,8 @@ const Projects = () => {
             </CardActions>
           </ProjectCard>
         </TabPanel>
-        <TabPanel value={4}>
+
+        <TabPanel value={5}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">

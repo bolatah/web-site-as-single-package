@@ -93,13 +93,13 @@ const cards = [
     description: (
       <ul>
         <li>
-          JavaScript (React.js, React Native, node.js, Next.js, Redux,
+          JavaScript (Angular, React.js, React Native, node.js, Next.js, Redux, RxJS,
           TypeScript)
         </li>
         <li>Java (Spring Boot)</li>
         <li>Python (pandas, Numpy, Matplotlib, seaborn, Dash etc.)</li>
-        <li>Docker</li>
-        <li> SQL (PostgreSQL), NoSQL (MongoDB)</li>
+        <li>Docker, AWS Services</li>
+        <li>SQL (PostgreSQL), NoSQL (MongoDB, DynamoDB)</li>
 
         {/* <li>SAP Finance & Controlling</li> */}
       </ul>

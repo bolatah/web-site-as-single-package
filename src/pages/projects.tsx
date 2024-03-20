@@ -133,6 +133,13 @@ const Projects = () => {
               icon={faAndroid}
               style={{ marginRight: "0.5rem" }}
             />
+            Personnel-Management
+          </Tab>
+          <Tab>
+            <FontAwesomeIcon
+              icon={faAndroid}
+              style={{ marginRight: "0.5rem" }}
+            />
             Smart Converter
           </Tab>
           <Tab>
@@ -161,6 +168,40 @@ const Projects = () => {
         </TabsList>
 
         <TabPanel value={0}>
+          <ProjectCard>
+            <CardContent>
+              <Typography gutterBottom variant="h5">
+                Personnel-Management
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                textAlign="justify"
+                paragraph
+              >
+                <FormattedMessage id="personnel_management" />
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                variant="outlined"
+                href="https://personnel-management-08584936e9f3.herokuapp.com"
+              >
+                <FormattedMessage id="start_button" />
+              </Button>
+              <Button
+                size="small"
+                variant="contained"
+                href="https://github.com/bolatah/personnel-management"
+              >
+                Github Codes
+              </Button>
+            </CardActions>
+          </ProjectCard>
+        </TabPanel>
+
+        <TabPanel value={1}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">
@@ -194,7 +235,7 @@ const Projects = () => {
           </ProjectCard>
         </TabPanel>
 
-        <TabPanel value={1}>
+        <TabPanel value={2}>
           <ProjectCard className={styles.openBlogv2}>
             <CardContent>
               <Typography gutterBottom variant="h5">
@@ -228,7 +269,7 @@ const Projects = () => {
           </ProjectCard>
         </TabPanel>
 
-        <TabPanel value={2}>
+        <TabPanel value={3}>
           <ProjectCard className={styles.openBlogv2}>
             <CardContent>
               <Typography gutterBottom variant="h5">
@@ -262,7 +303,7 @@ const Projects = () => {
           </ProjectCard>
         </TabPanel>
 
-        <TabPanel value={3}>
+        <TabPanel value={4}>
           <ProjectCard className={styles.openBlogv2}>
             <CardContent>
               <Typography gutterBottom variant="h5">
@@ -296,7 +337,7 @@ const Projects = () => {
           </ProjectCard>
         </TabPanel>
 
-        <TabPanel value={4}>
+        <TabPanel value={5}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">
@@ -330,7 +371,7 @@ const Projects = () => {
           </ProjectCard>
         </TabPanel>
 
-        <TabPanel value={5}>
+        <TabPanel value={6}>
           <ProjectCard>
             <CardContent>
               <Typography gutterBottom variant="h5">

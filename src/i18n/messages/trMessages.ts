@@ -34,6 +34,9 @@ export const trMessages = {
   languages_content_third_part:
     "Yabancılara Türkçe dersleri verdim ve yabancılara Türkçe eğitimi ile ilgili sistematik bir anlayışa da sahip oldum.",
   // Projects
+  
+  word_cloud_app: "Windows OS ve Linux dağıtımları için bir masaüstü uygulaması olarak, bu uygulama özelleştirilebilir kelime bulutları oluşturur. Ayrıca, değişik stil ayarları uygulanabilir. Frontend, Angular 18 framework'ü ve D3 kütüphanesi ile geliştirilirken, backend Electron API ve SQLite veritabanını kullanır. GitHub CI/CD araçları, özellikle GitHub Actions, kullanılarak Windows ve Linux için çalıştırılabilir dosyalar oluşturuldu ve indirmeye hazır hale getirildi.",
+  download: "İndir",
   personnel_management: "Personel yönetimi, Angular (Frontend), Java-Spring Boot (Backend) ve MongoDB veritabanı kullanılarak hazırlanmıştır. Bu uygulama, çalışanları ekleme, düzenleme ve silmenin yanı sıra devamsızlık ve doğum günlerini işaretleme gibi işlevleri de sağlar.", 
   flashcard_session_description:
     "Dil öğrenmeye yönelik uygulama, google hizmeti ile kullanıcının kimlik doğrulaması ve next_auth.js ile oturumun sürekli kalması sağlanarak sonrasında kullanıcıya özel flashcardları yaratmayı, bunları önizlemeyi, modifiye etmeyi ve silmeyi amaçlar. React framwork olan Next.js ile düzenlenerek yapılmış, önyüzde Redux ile durum yönetimi sağlanmış olup MongoDB ile yaratılan flashcardlar bir veritabanına aktarılmaktadır. ",

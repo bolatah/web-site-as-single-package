@@ -34,6 +34,8 @@ export const deMessages = {
   languages_content_third_part:
     "Ich habe auch Türkischunterricht für Ausländer gegeben und dabei ein systematisches Verständnis für das Unterrichten der Fremdsprache erworben.",
   // Projects
+  word_cloud_app: "Als Desktop-Anwendung für Windows OS und Linux-Distributionen erstellt die App anpassbare Wortwolken. Zudem können zusätzliche Styling-Einstellungen angewendet werden. Das Frontend basiert auf dem Angular-18-Framework und der D3-Bibliothek, während das Backend die Electron-API und eine SQLite-Datenbank nutzt. Mithilfe von GitHub-CI/CD-Tools wie GitHub Actions wurden die ausführbaren Dateien für Windows und Linux erstellt und zum Download bereitgestellt.",
+  download: "Herunterladen",
   personnel_management: "Personalmanagement wird über Angular (Frontend), Java-Spring Boot (Backend) und MongoDB-Datenbank ermöglicht. Diese Anwendung ermöglicht die Verwaltung von Mitarbeitern, wie das Hinzufügen, Bearbeiten und Löschen, sowie Funktionen wie das Markieren von Abwesenheiten und Geburtstagen.", 
   flashcard_session_description:
     "Die Anwendung, die für das Sprachenlernen entwickelt wurde, zielt darauf ab, die Identität des Benutzers über den Google-Authentifizierung-Dienst zu authentifizieren und die Sitzung mit next_auth.js aufrechtzuerhalten. Anschließend sollen personalisierte Karteikarten für den Benutzer erstellt werden, die Vorschau, Änderung und Löschung ermöglichen. Diese Anwendung wurde mit dem React-Framework Next.js erstellt, wobei das State Management auf der Frontend-Seite mit Redux erfolgt, und die erstellten Karteikarten werden in einer MongoDB-Datenbank gespeichert.",

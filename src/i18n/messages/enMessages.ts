@@ -35,6 +35,8 @@ export const enMessages = {
     "I gave also Turkish classes to foreigners and meanwhile gained a systematic understanding of teaching the foreing language.",
 
   // Projects
+  word_cloud_app: "As a desktop application for Windows OS and Linux distributions, the app creates customizable word clouds. Moreover, additional styling settings can be applied. The frontend is built using the Angular 18 framework and the D3 library, while the backend utilizes the Electron API and an SQLite database. Using GitHub CI/CD tools such as GitHub Actions, the executables for both Windows and Linux were built and made available for download.",
+  download: "Download",
   personnel_management: "Personnel Management is facilitated through Angular (Frontend), Java Spring-Boot (Backend), and MongoDB database. This application allows for employee management tasks like addition, editing, and deletion, along with features such as marking absences and birthdays.", 
   flashcard_session_description:
     "The application, designed for language learning, aims to authenticate the user with the Google Authentication Provider service, maintain the session persistence with the next_auth.js, and then create personalized flashcards for the user, allowing them to preview, modify, and delete. It is built on the front-end by using the React framework Next.js, ensuring state management with Redux, and the flashcards created are stored in a database with MongoDB.",

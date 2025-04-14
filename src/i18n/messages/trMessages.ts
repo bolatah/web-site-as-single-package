@@ -34,7 +34,7 @@ export const trMessages = {
   languages_content_third_part:
     "Yabancılara Türkçe dersleri verdim ve yabancılara Türkçe eğitimi ile ilgili sistematik bir anlayışa da sahip oldum.",
   // Projects
-  
+  copy_nest: "Copy Nest, düzenlenebilir içeriğe sahip Yuvaları yönetmek için tasarlanmış bir İlerici Web Uygulamasıdır (PWA). Yuva, kullanıcıların kişisel notlarını, fikirlerini veya metin parçacıklarını saklayıp düzenleyebilecekleri dijital bir alandır. Uygulama, kullanıcı kimlik doğrulaması için Google ile Giriş ve e-posta/şifre sağlayıcılarını içeren Firebase Kimlik Doğrulama ile entegre edilmiştir. Backend kısmı, Spring Boot ile geliştirilmiş olup, veri depolama için MongoDB kullanmaktadır.",
   word_cloud_app: "Windows OS ve Linux dağıtımları için bir masaüstü uygulaması olarak, bu uygulama özelleştirilebilir kelime bulutları oluşturur. Ayrıca, değişik stil ayarları uygulanabilir. Frontend, Angular 18 framework'ü ve D3 kütüphanesi ile geliştirilirken, backend Electron API ve SQLite veritabanını kullanır. GitHub CI/CD araçları, özellikle GitHub Actions, kullanılarak Windows ve Linux için çalıştırılabilir dosyalar oluşturuldu ve indirmeye hazır hale getirildi.",
   download: "İndir",
   personnel_management: "Personel yönetimi, Angular (Frontend), Java-Spring Boot (Backend) ve MongoDB veritabanı kullanılarak hazırlanmıştır. Bu uygulama, çalışanları ekleme, düzenleme ve silmenin yanı sıra devamsızlık ve doğum günlerini işaretleme gibi işlevleri de sağlar.", 

@@ -35,6 +35,7 @@ export const enMessages = {
     "I gave also Turkish classes to foreigners and meanwhile gained a systematic understanding of teaching the foreing language.",
 
   // Projects
+  copy_nest: "Copy Nest is a Progressive Web Application (PWA) designed to manage Nests with editable content. A Nest is a digital container where users can store and organize their personal notes, ideas, or text snippets. The app integrates Firebase Authentication with Google Sign-In and email/password providers for user authentication and verification. The backend is built with Spring Boot and uses MongoDB for data storage.",
   word_cloud_app: "As a desktop application for Windows OS and Linux distributions, the app creates customizable word clouds. Moreover, additional styling settings can be applied. The frontend is built using the Angular 18 framework and the D3 library, while the backend utilizes the Electron API and an SQLite database. Using GitHub CI/CD tools such as GitHub Actions, the executables for both Windows and Linux were built and made available for download.",
   download: "Download",
   personnel_management: "Personnel Management is facilitated through Angular (Frontend), Java Spring-Boot (Backend), and MongoDB database. This application allows for employee management tasks like addition, editing, and deletion, along with features such as marking absences and birthdays.", 

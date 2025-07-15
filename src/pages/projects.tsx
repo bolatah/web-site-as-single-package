@@ -187,7 +187,7 @@ const Projects = () => {
         <Button
           size="small"
           variant="outlined"
-          href="https://copy-nest-56e1ca9f4c40.herokuapp.com"
+          href="https://copy-nest-frontend-0eb215f6fc6a.herokuapp.com/"
           sx={{ marginRight: 2 }}
         >
           <FormattedMessage id="start_button" />

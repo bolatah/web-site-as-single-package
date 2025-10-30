@@ -93,13 +93,16 @@ const cards = [
     description: (
       <ul>
         <li>
+          SAP (ABAP,  ABAP Cloud, SAP HANA, SAP FI & CO)
+        </li>
+        <li>
           JavaScript (Angular, React.js, React Native, node.js, Next.js, Redux, RxJS,
           TypeScript)
         </li>
         <li>Java (Spring Boot)</li>
         <li>Python (pandas, Numpy, Matplotlib, seaborn, Dash etc.)</li>
         <li>Docker, AWS Services</li>
-        <li>SQL (PostgreSQL), NoSQL (MongoDB, DynamoDB)</li>
+        <li>SQL (PostgreSQL, ABAP SQL), NoSQL (MongoDB, DynamoDB)</li>
 
         {/* <li>SAP Finance & Controlling</li> */}
       </ul>
@@ -137,6 +140,11 @@ const cards = [
     description: (
       <>
         <ul>
+          <li>
+            <a href="https://www.credly.com/badges/d949794c-fdaa-4d84-b812-646b39f9feb6">
+              SAP Certified Associate - Back-End Developer - ABAP Cloud
+            </a>
+          </li>
           <li>
             <a href="https://www.credly.com/badges/b77d747a-0362-486c-b701-c7d5ea30f955">
               IBM Data Science Professional Certificate
